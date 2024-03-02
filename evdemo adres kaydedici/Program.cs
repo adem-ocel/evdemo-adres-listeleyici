@@ -1,6 +1,5 @@
 ﻿using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
-
 namespace evdemo_adres_kaydedici;
 
 class Program
@@ -26,10 +25,11 @@ class Program
         {
             text += PdfTextExtractor.GetTextFromPage(reader, page);
         }
-        text = text.Replace('�', 'i');
         reader.Close();
         return text;
     }
+//              adresslist.Add(,splited_text[i + 1]);
+
 
 
     static List<string> list_customer_adress(string text)
@@ -40,10 +40,9 @@ class Program
         for (int i = 0; i < splited_text.Length; i++)
         {
             string line = splited_text[i];
-            //bir sonraki satırı alır
-            if (line.StartsWith("Alıcı Adı :"))
+            if (line.StartsWith("Alıcı Adı : "))
             {
-                adresslist.Add(splited_text[i + 1]);
+                adresslist.Add(splited_text[i].Replace("Alıcı Adı : ","").Split(" -")[0]+" | "+splited_text[i + 1]);
             }
         }
         return adresslist;

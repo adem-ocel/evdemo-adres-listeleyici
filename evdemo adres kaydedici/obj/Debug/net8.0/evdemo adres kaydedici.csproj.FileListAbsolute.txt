@@ -1,0 +1,18 @@
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/bin/Debug/net8.0/evdemo adres kaydedici
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/bin/Debug/net8.0/evdemo adres kaydedici.deps.json
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/bin/Debug/net8.0/evdemo adres kaydedici.runtimeconfig.json
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/bin/Debug/net8.0/evdemo adres kaydedici.dll
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/bin/Debug/net8.0/evdemo adres kaydedici.pdb
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/bin/Debug/net8.0/BouncyCastle.Crypto.dll
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/bin/Debug/net8.0/itextsharp.dll
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/obj/Debug/net8.0/evdemo adres kaydedici.csproj.AssemblyReference.cache
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/obj/Debug/net8.0/evdemo adres kaydedici.GeneratedMSBuildEditorConfig.editorconfig
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/obj/Debug/net8.0/evdemo adres kaydedici.AssemblyInfoInputs.cache
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/obj/Debug/net8.0/evdemo adres kaydedici.AssemblyInfo.cs
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/obj/Debug/net8.0/evdemo adres kaydedici.csproj.CoreCompileInputs.cache
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/obj/Debug/net8.0/evdemo adres kaydedici.csproj.CopyComplete
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/obj/Debug/net8.0/evdemo adres kaydedici.dll
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/obj/Debug/net8.0/refint/evdemo adres kaydedici.dll
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/obj/Debug/net8.0/evdemo adres kaydedici.pdb
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/obj/Debug/net8.0/evdemo adres kaydedici.genruntimeconfig.cache
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/obj/Debug/net8.0/ref/evdemo adres kaydedici.dll

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("evdemo adres kaydedici")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c75c330e36ab23fce0ad73b8ccadcf63a97cae4b")]
 [assembly: System.Reflection.AssemblyProductAttribute("evdemo adres kaydedici")]
 [assembly: System.Reflection.AssemblyTitleAttribute("evdemo adres kaydedici")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
