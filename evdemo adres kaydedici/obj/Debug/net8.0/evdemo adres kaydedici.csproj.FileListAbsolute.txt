@@ -16,3 +16,4 @@
 /home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/obj/Debug/net8.0/evdemo adres kaydedici.pdb
 /home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/obj/Debug/net8.0/evdemo adres kaydedici.genruntimeconfig.cache
 /home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/obj/Debug/net8.0/ref/evdemo adres kaydedici.dll
+/home/adem/vscode projects/evdemo adres kaydedici/evdemo adres kaydedici/obj/Debug/net8.0/evdemo adres kaydedici.sourcelink.json
