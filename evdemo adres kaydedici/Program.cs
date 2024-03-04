@@ -1,4 +1,5 @@
-﻿using iTextSharp.text.pdf;
+﻿using System.Text.RegularExpressions;
+using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
 namespace evdemo_adres_kaydedici;
 
@@ -28,8 +29,7 @@ class Program
         reader.Close();
         return text;
     }
-    //              adresslist.Add(,splited_text[i + 1]);
-
+    
 
 
     static List<string> list_customer_adress(string text)
@@ -59,22 +59,50 @@ class Program
             {
                 string adsoyad = splited_text[i].Replace("Alıcı Adı : ", "").Split(" -")[0];
                 string adress = splited_text[i + 1];
+                string no ="";
+                if (int.TryParse(splited_text[i+5],out _))
+                {
+                 no = splited_text[i+5];
+                }
+                else if (int.TryParse(splited_text[i+6],out _))
+                {
+                 no = splited_text[i+6];
+                }
+                   else if (int.TryParse(splited_text[i+7],out _))
+                {
+                 no = splited_text[i+7];
+                }
+                   else if (int.TryParse(splited_text[i+8],out _))
+                {
+                 no = splited_text[i+8];
+                }
+                   else if (int.TryParse(splited_text[i+9],out _))
+                {
+                 no = splited_text[i+9];
+                }
+                else
+                {
+                no = "unkown";
+                }
+                
+                               adress= Replacewords(adress);
 
+                adress = RemoveDuplicateWords(adress);
                 switch (adress.Split(' ')[adress.Split(' ').Length - 2].ToLower())
                 {
-                    case "başiskele": başiskele_adresleri.Add(adsoyad + " | " + adress); break;
-                    case "izmit": izmit_adresleri.Add(adsoyad + " | " + adress); break;
-                    case "kartepe": kartepe_adresleri.Add(adsoyad + " | " + adress); break;
-                    case "derince": derince_adresleri.Add(adsoyad + " | " + adress); break;
-                    case "gölcük": gölcük_adresleri.Add(adsoyad + " | " + adress); break;
-                    case "körfez": körfez_adresleri.Add(adsoyad + " | " + adress); break;
-                    case "çayırova": çayırova_adresleri.Add(adsoyad + " | " + adress); break;
-                    case "darıca": darıca_adresleri.Add(adsoyad + " | " + adress); break;
-                    case "dilovası": dilovası_adresleri.Add(adsoyad + " | " + adress); break;
-                    case "gebze": gebze_adresleri.Add(adsoyad + " | " + adress); break;
-                    case "kandıra": kandıra_adresleri.Add(adsoyad + " | " + adress); break;
-                    case "karamürsel": karamürsel_adresleri.Add(adsoyad + " | " + adress); break;
-                    default: diğer_adresler.Add(adsoyad + " | " + adress); break;
+                    case "başiskele": başiskele_adresleri.Add(no+" | "+ adsoyad + " | " + adress); break;
+                    case "izmit": izmit_adresleri.Add(no+" | "+ adsoyad + " | " + adress); break;
+                    case "kartepe": kartepe_adresleri.Add(no+" | "+ adsoyad + " | " + adress); break;
+                    case "derince": derince_adresleri.Add(no+" | "+ adsoyad + " | " + adress); break;
+                    case "gölcük": gölcük_adresleri.Add(no+" | "+ adsoyad + " | " + adress); break;
+                    case "körfez": körfez_adresleri.Add(no+" | "+ adsoyad + " | " + adress); break;
+                    case "çayırova": çayırova_adresleri.Add(no+" | "+ adsoyad + " | " + adress); break;
+                    case "darıca": darıca_adresleri.Add(no+" | "+ adsoyad + " | " + adress); break;
+                    case "dilovası": dilovası_adresleri.Add(no+" | "+ adsoyad + " | " + adress); break;
+                    case "gebze": gebze_adresleri.Add(no+" | "+ adsoyad + " | " + adress); break;
+                    case "kandıra": kandıra_adresleri.Add(no+" | "+ adsoyad + " | " + adress); break;
+                    case "karamürsel": karamürsel_adresleri.Add(no+" | "+ adsoyad + " | " + adress); break;
+                    default: diğer_adresler.Add(no+" | "+ adsoyad + " | " + adress); break;
                 }
             }
         }
@@ -104,5 +132,43 @@ class Program
         adresslist.Add("------------------------------------------------------------------------------------------");
         adresslist.AddRange(diğer_adresler);
         return adresslist;
+    }
+    static string RemoveDuplicateWords(string text)
+    {
+              string pattern = @"\b(\w+)\s+\1\b";
+        string replacement = "$1";
+        // Sadece son tekrarlamayı temizle
+        text = Regex.Replace(text, pattern, replacement);
+        string[] splitedtext = text.Split(' ');
+        text = "";
+
+        for (int i = 0; i < splitedtext.Length; i++)
+        {
+
+           if (i >= 2)
+            {
+                if (splitedtext[i] != splitedtext[i - 2])
+                {
+                    text += " " + splitedtext[i];
+                }
+            }  
+            else
+            {
+                text += " " + splitedtext[i];
+            }
+        }
+        text = text.Trim();
+
+        return text;
+    }
+    static string Replacewords(string text)
+    {
+                text = text.Split("Diğer")[0];
+
+          text = text.Replace(" / ", " ");
+                    text = text.Replace(" /", " ");
+                    text = text.Replace("/", " ");
+
+        return text;
     }
 }
